@@ -95,7 +95,7 @@ ngx_stream_lua_ssl_verify_by_lua(ngx_conf_t *cf, ngx_command_t *cmd,
     void *conf)
 {
 #if !defined(SSL_ERROR_WANT_RETRY_VERIFY) ||                                 \
-	OPENSSL_VERSION_NUMBER < 0x40100000L
+    OPENSSL_VERSION_NUMBER < 0x40100000L
 
     ngx_log_error(NGX_LOG_EMERG, cf->log, 0,
                   "at least OpenSSL 4.1.0 required but found "
